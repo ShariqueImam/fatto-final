@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https:fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+.font {
+  font-family: "Raleway", serif;
+}
+.font1 {
+  font-family: "Ubuntu", sans-serif;
+}
+.font2 {
+  font-family: "Montserrat", sans-serif;
+}
+/* .newsletterBg {
+  background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./assets/newsletterbg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: auto;
+  width: 100vw;
+} */
+.border-move-animation::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #eab308;
+  transition: width 0.3s;
+}
+
+.border-move-animation:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.flare {
+  position: fixed;
+
+  border: 2px solid #eab308;
+  border-radius: 60%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999999 !important ;
+  backdrop-filter: blur(1px);
+  background-color: none;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  cursor: none !important; /* Let's hide the default cursor so it looks way better */
+}
+
+/* We need to remove this custom cursor in mobile devices */
+@media screen and (max-width: 768px) {
+  .flare {
+    width: 0;
+    height: 0;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+}
+.flare.pointer {
+  opacity: 0 !important;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+
+/* Styles for the moving text backgorund on the home page */
+.movingTextWrapper {
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.movingText {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
