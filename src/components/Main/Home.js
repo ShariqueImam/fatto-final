@@ -6,18 +6,18 @@ import Navbar from "../UI/Navbar/Navbar";
 
 const Home = () => {
   window.scrollTo(0, 0);
-
   const { width } = useWindowSize();
+  console.log(width);
   const FeaturedBackground1 = styled.div`
     background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
       url(${(width < 500 && bgImg) ||
       (width > 500 && width < 1000 && bgImg) ||
       (width > 1000 && bgImg)});
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: 100vh;
     width: 100vw;
   `;
   const style = {
@@ -32,19 +32,21 @@ const Home = () => {
       "w-[90%] md:w-[100%] h-[80%] flex flex-col items-start justify-center  mx-auto font1",
   };
   return (
-    <FeaturedBackground1 className="">
-      <div className="backdrop-blur-[1px] h-full w-full">
-        <Navbar />
-        <div className={style.mainContent}>
-          <div className={style.btnContainer}>
-            {/* <Link to={"/about"} className="flex items-center justify-center">
+    <div>
+      <Navbar />
+      <FeaturedBackground1 className="h-[20vh] md:h-[100vh]">
+        <div className="backdrop-blur-[1px] h-full w-full">
+          <div className={style.mainContent}>
+            <div className={style.btnContainer}>
+              {/* <Link to={"/about"} className="flex items-center justify-center">
               <button className={style.btn}></button>
               <AiOutlineArrowRight className={style.arrow} />
-            </Link> */}
+              </Link> */}
+            </div>
           </div>
         </div>
-      </div>
-    </FeaturedBackground1>
+      </FeaturedBackground1>
+    </div>
   );
 };
 
