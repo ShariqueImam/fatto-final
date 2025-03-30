@@ -95,31 +95,31 @@ const Footer = () => {
       <div className="border-t border-gray-200">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-200 text-sm">
+            <p className="text-white text-sm">
               © Copyright 2025 by Fatto Per Dei
             </p>
             <nav className="flex gap-6 mt-4 md:mt-0">
               <a
-                href="/home"
-                className="text-gray-200 hover:text-white transition-colors"
+                href="/"
+                className="text-white hover:text-white transition-colors"
               >
                 Home
               </a>
               <a
-                href="/about"
-                className="text-gray-200 hover:text-white transition-colors"
+                href="#about"
+                className="text-white hover:text-white transition-colors"
               >
                 About Us
               </a>
               <a
-                href="/privacy"
-                className="text-gray-200 hover:text-white transition-colors"
+                href="#products"
+                className="text-white hover:text-white transition-colors"
               >
                 Our Products
               </a>
               <a
-                href="/contact"
-                className="text-gray-200 hover:text-white transition-colors"
+                href="#mission"
+                className="text-white hover:text-white transition-colors"
               >
                 Our Mission
               </a>
