@@ -266,7 +266,7 @@ export const ProductsData = [
   {
     productName: "Deodorant",
     productId: "deodorant",
-    productPrice: [{ size1: "", price1: "$" }],
+    productPrice: [{ size: "", price: "$" }],
     productImage: DeodorantImage,
     productDescription: [
       {
