@@ -210,7 +210,7 @@ export const ProductsData = [
   {
     productName: "Toothpaste",
     productId: "toothpaste",
-    productPrice: [{ size: "", price: "$" }],
+    productPrice: [{ size: "", price: "$12" }],
     productImage: ToothpasteImage,
     productDescription: [
       {
@@ -266,7 +266,7 @@ export const ProductsData = [
   {
     productName: "Deodorant",
     productId: "deodorant",
-    productPrice: [{ size: "", price: "$" }],
+    productPrice: [{ size: "", price: "$16" }],
     productImage: DeodorantImage,
     productDescription: [
       {
