@@ -1,5 +1,6 @@
 import React from "react";
 import bgImg from "../../assets/banner.jpg";
+import bgImgPhone from "../../assets/new-banner.jpg";
 import styled from "styled-components";
 import useWindowSize from "../../hooks/useWindowSize";
 import Navbar from "../UI/Navbar/Navbar";
@@ -10,10 +11,9 @@ const Home = () => {
   console.log(width);
   const FeaturedBackground1 = styled.div`
     background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-      url(${(width < 500 && bgImg) ||
+      url(${(width < 500 && bgImgPhone) ||
       (width > 500 && width < 1000 && bgImg) ||
       (width > 1000 && bgImg)});
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -33,8 +33,8 @@ const Home = () => {
   };
   return (
     <div>
-      <Navbar />
-      <FeaturedBackground1 className="h-[20vh] md:h-[100vh]">
+      <FeaturedBackground1 className="h-[100vh]">
+        <Navbar />
         <div className="backdrop-blur-[1px] h-full w-full">
           <div className={style.mainContent}>
             <div className={style.btnContainer}>

@@ -95,7 +95,7 @@ const NavDrawer = (props) => {
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <button className="px-2 py-4 flex items-center justify-between w-[100vw] border-b-[1px]">
-            <h2 className="text-4xl font-bold text-white  tracking-wide ml-5">
+            <h2 className="text-4xl font-bold text-yellow  tracking-wide ml-5">
               Fatto Per Dei
             </h2>
             <section className="flex">
