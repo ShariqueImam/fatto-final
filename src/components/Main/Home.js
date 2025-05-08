@@ -15,10 +15,11 @@ const Home = () => {
       (width > 500 && width < 1000 && bgImg) ||
       (width > 1000 && bgImg)});
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-attachment: auto;
     width: 100vw;
+    height: 85vh;
   `;
   const style = {
     heading:
@@ -33,8 +34,8 @@ const Home = () => {
   };
   return (
     <div>
-      <FeaturedBackground1 className="h-[100vh]">
-        <Navbar />
+      <Navbar />
+      <FeaturedBackground1 className="">
         <div className="backdrop-blur-[1px] h-full w-full">
           <div className={style.mainContent}>
             <div className={style.btnContainer}>
