@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "../../assets/banner.jpg";
+import bgImg from "../../assets/desktop.jpg";
 import bgImgPhone from "../../assets/new-banner.jpg";
 import styled from "styled-components";
 import useWindowSize from "../../hooks/useWindowSize";
